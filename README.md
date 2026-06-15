@@ -4,7 +4,7 @@ An interactive, natural-language data exploration chatbot designed for Telecom a
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 * **Natural Language Queries**: Ask questions in plain English (e.g., *"What is the average credit amount by housing type?"*, *"Show me the top 5 largest business loans"*).
 * **Hybrid Execution Engine**:
@@ -15,7 +15,7 @@ An interactive, natural-language data exploration chatbot designed for Telecom a
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Backend**: FastAPI (Python 3.13)
 * **Frontend**: HTML5, Vanilla CSS3 (Slate dark theme / glassmorphic UI), and Vanilla JavaScript
@@ -25,7 +25,7 @@ An interactive, natural-language data exploration chatbot designed for Telecom a
 
 ---
 
-## 📦 How to Run Locally
+## How to Run Locally
 
 ### 1. Install Dependencies
 Make sure you have python installed, and run:
