@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,14 @@
     <!-- Google Fonts: Inter & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Main Layout Split -->
@@ -31,7 +35,13 @@
                         <span class="status-text">Local Rule-Based Engine</span>
                     </div>
                     <button id="btn-settings" class="settings-btn" title="Configure Gemini API Key">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.5 1z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.5 1z">
+                            </path>
+                        </svg>
                         <span>GenAI Settings</span>
                     </button>
                 </div>
@@ -44,22 +54,30 @@
                     <div class="chat-messages" id="chat-messages">
                         <div class="message assistant">
                             <div class="message-bubble">
-                                Hello! I am your Smart Financial Data Assistant. I query the **German Credit Portfolio** (1,000 credit records preprocessed with risk flags).
+                                Hello! I am your Smart Financial Data Assistant. I query the German Credit Portfolio
+                                (1,000 credit records preprocessed with risk flags).
                                 <br><br>
-                                Feel free to ask me questions in plain English. I will summarize the results, format the data in a table, and render charts automatically!
+                                Feel free to ask me questions in plain English. I will summarize the results, format the
+                                data in a table, and render charts automatically!
                             </div>
                             <span class="message-meta">System Assistant • Just now</span>
                         </div>
                     </div>
-                    
+
                     <div class="typing-indicator" id="typing-indicator" style="display: none;">
                         <span></span><span></span><span></span>
                     </div>
 
                     <div class="chat-input-area">
-                        <input type="text" id="chat-input" placeholder="Ask a question about the portfolio data..." autocomplete="off">
+                        <input type="text" id="chat-input" placeholder="Ask a question about the portfolio data..."
+                            autocomplete="off">
                         <button id="btn-send" class="btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
                             <span>Send</span>
                         </button>
                     </div>
@@ -86,7 +104,9 @@
                         </div>
                         <div class="table-wrapper">
                             <table class="data-table" id="query-result-table">
-                                <thead><tr id="query-table-header"></tr></thead>
+                                <thead>
+                                    <tr id="query-table-header"></tr>
+                                </thead>
                                 <tbody id="query-table-body"></tbody>
                             </table>
                         </div>
@@ -107,15 +127,26 @@
                         <div class="questions-grid">
                             <div class="question-group">
                                 <h4>✅ 3 Questions It Answers Well (Structured)</h4>
-                                <button class="suggested-q" data-q="What is the average credit amount by housing type?">Average Credit by Housing</button>
-                                <button class="suggested-q" data-q="Show me the top 5 largest loans for business.">Top 5 Business Loans</button>
-                                <button class="suggested-q" data-q="What is the high risk loan rate for male vs female?">Risk Rate by Gender</button>
+                                <button class="suggested-q"
+                                    data-q="What is the average credit amount by housing type?">Average Credit by
+                                    Housing</button>
+                                <button class="suggested-q" data-q="Show me the top 5 largest loans for business.">Top 5
+                                    Business Loans</button>
+                                <button class="suggested-q"
+                                    data-q="What is the high risk loan rate for male vs female?">Risk Rate by
+                                    Gender</button>
                             </div>
                             <div class="question-group">
                                 <h4>❌ 3 Questions It Fails (Conceptual Limitations)</h4>
-                                <button class="suggested-q" data-q="Why did client number 82 get classified as high risk?">Why is Client 82 High Risk?</button>
-                                <button class="suggested-q" data-q="What will be our default rate next quarter if inflation rises by 2.5%?">Inflation / Macro Forecast</button>
-                                <button class="suggested-q" data-q="Should we approve a $15,000 car loan for a 22-year-old?">Lending Decision Rules</button>
+                                <button class="suggested-q"
+                                    data-q="Why did client number 82 get classified as high risk?">Why is Client 82 High
+                                    Risk?</button>
+                                <button class="suggested-q"
+                                    data-q="What will be our default rate next quarter if inflation rises by 2.5%?">Inflation
+                                    / Macro Forecast</button>
+                                <button class="suggested-q"
+                                    data-q="Should we approve a $15,000 car loan for a 22-year-old?">Lending Decision
+                                    Rules</button>
                             </div>
                         </div>
                     </div>
@@ -132,13 +163,17 @@
                 <button class="close-btn" id="btn-close-modal">×</button>
             </div>
             <div class="modal-body">
-                <p>By default, the assistant runs on a locally-compiled <strong>Semantic Rule Parser</strong> which handles standard data aggregations, filters, and rankings without any configuration.</p>
-                <p>To enable advanced, open-ended natural language reasoning, provide a <strong>Google Gemini API Key</strong>. The backend will switch to the official <code>google-genai</code> SDK and use <code>gemini-2.5-flash</code> to write Pandas queries on the fly.</p>
-                
+                <p>By default, the assistant runs on a locally-compiled <strong>Semantic Rule Parser</strong> which
+                    handles standard data aggregations, filters, and rankings without any configuration.</p>
+                <p>To enable advanced, open-ended natural language reasoning, provide a <strong>Google Gemini API
+                        Key</strong>. The backend will switch to the official <code>google-genai</code> SDK and use
+                    <code>gemini-2.5-flash</code> to write Pandas queries on the fly.</p>
+
                 <div class="form-group">
                     <label for="gemini-key">Gemini API Key</label>
                     <input type="password" id="gemini-key" placeholder="AIzaSy...">
-                    <small>The key is processed locally on your server and is not sent to any third party other than Google's Gemini endpoint.</small>
+                    <small>The key is processed locally on your server and is not sent to any third party other than
+                        Google's Gemini endpoint.</small>
                 </div>
             </div>
             <div class="modal-footer">
@@ -147,7 +182,8 @@
             </div>
         </div>
     </div>
-    
+
     <script src="/app.js"></script>
 </body>
+
 </html>
